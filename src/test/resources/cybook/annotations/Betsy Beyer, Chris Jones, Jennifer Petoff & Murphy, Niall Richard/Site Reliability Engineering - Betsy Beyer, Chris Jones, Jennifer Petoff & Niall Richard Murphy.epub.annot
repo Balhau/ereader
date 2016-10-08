@@ -1,0 +1,141 @@
+<?xml version="1.0"?><annotationSet xmlns="http://ns.adobe.com/digitaleditions/annotations" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/elements/1.1/"><publication></publication><annotation color="#EE00EE"><dc:date>2016-04-20T13:12:51Z</dc:date><dc:title>2016-04-20T13:12:51Z</dc:title><target><fragment start="OEBPS/foreword01.html#point(/1/2/1/1/10/1:570)" end="OEBPS/foreword01.html#point(/1/2/1/1/10/1:683)"><text>They are written bravely, and with an intellectual honesty that is refreshing and uncommon in industry literature</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-20T13:13:55Z</dc:date><dc:title>2016-04-20T13:13:55Z</dc:title><target><fragment start="OEBPS/foreword01.html#point(/1/2/1/1/12/1:72)" end="OEBPS/foreword01.html#point(/1/2/1/1/12/1:257)"><text>Today, we hear a brazen culture of “just show me the code.” A culture of “ask no questions” has grown up around open source, where community rather than expertise is championed.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-20T13:14:23Z</dc:date><dc:title>2016-04-20T13:14:23Z</dc:title><target><fragment start="OEBPS/foreword01.html#point(/1/2/1/1/12/1:494)" end="OEBPS/foreword01.html#point(/1/2/1/1/12/1:572)"><text>Nothing here tells us how to solve problems universally, but that is the point</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-20T13:14:39Z</dc:date><dc:title>2016-04-20T13:14:39Z</dc:title><target><fragment start="OEBPS/foreword01.html#point(/1/2/1/1/12/1:657)" end="OEBPS/foreword01.html#point(/1/2/1/1/12/1:730)"><text> Implementations are ephemeral, but the documented reasoning is priceless</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-22T22:16:10Z</dc:date><dc:title>2016-04-22T22:16:10Z</dc:title><target><fragment start="OEBPS/preface01.html#point(/1/2/1/1/3:3)" end="OEBPS/preface01.html#point(/1/2/1/1/4/6:267)"><text>Software engineering has this in common with having children: the
+labor before the birth is painful and difficult, but the labor
+after the birth is where you actually spend most of your effort. Yet
+software engineering as a discipline spends much more time talking
+about the first period as opposed to the second, despite estimates
+that 40–90% of the total costs of a system are incurred after
+birth</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-22T22:27:15Z</dc:date><dc:title>2016-04-22T22:27:15Z</dc:title><target><fragment start="OEBPS/preface01.html#point(/1/2/1/1/25:2)" end="OEBPS/preface01.html#point(/1/2/1/1/26/2/1/1:0)"><text>We like to think that Margaret Hamilton, working on the Apollo program
+on loan from MIT, had all of the significant traits of the first
+SRE.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T08:20:36Z</dc:date><dc:title>2016-04-23T08:20:36Z</dc:title><target><fragment start="OEBPS/ch01.html#point(/1/2/1/1/12/1/9:2)" end="OEBPS/ch01.html#point(/1/2/1/1/12/1/11:1)"><text>The sysadmin approach and the accompanying development/ops split has a
+number of disadvantages and pitfalls. These fall broadly into two
+categories: direct costs and indirect costs.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T08:24:37Z</dc:date><dc:title>2016-04-23T08:24:37Z</dc:title><target><fragment start="OEBPS/ch01.html#point(/1/2/1/1/14/1/5:2)" end="OEBPS/ch01.html#point(/1/2/1/1/14/1/6/2:193)"><text>What exactly is Site Reliability Engineering, as it has come to be
+defined at Google? My explanation is simple: SRE is what happens when
+you ask a software engineer to design an operations team</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T08:45:03Z</dc:date><dc:title>2016-04-23T08:45:03Z</dc:title><target><fragment start="OEBPS/ch01.html#point(/1/2/1/1/16/1/12/1/4/2:180)" end="OEBPS/ch01.html#point(/1/2/1/1/16/1/12/1/4/2:574)"><text>A classic and common
+approach to monitoring is to watch for a specific value or condition,
+and then to trigger an email alert when that value is exceeded or that condition occurs. However, this type of email alerting is not an
+effective solution: a system that requires a human to read an email
+and decide whether or not some type of action needs to be taken in
+response is fundamentally flawed</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:12:12Z</dc:date><dc:title>2016-04-23T16:12:12Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/10/1/19:2)" end="OEBPS/ch02.html#point(/1/2/1/1/10/1/20/7:111)"><text>Datacenters are connected to each other with our globe-spanning
+backbone network B4 [Jai13]. B4 is a software-defined networking
+architecture (and uses the OpenFlow open-standard communications
+protocol</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:16:45Z</dc:date><dc:title>2016-04-23T16:16:45Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/12/1/8/1/8/6/4/1:1)" end="OEBPS/ch02.html#point(/1/2/1/1/12/1/8/1/8/6/4/2/2/4:269)"><text>
+ Bigtable [Cha06] is a NoSQL database system that can handle
+databases that are petabytes in size. A Bigtable is a sparse,
+distributed, persistent multidimensional sorted map that is indexed
+by row key, column key, and timestamp; each value in the map is
+an uninterpreted array of bytes</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:19:05Z</dc:date><dc:title>2016-04-23T16:19:05Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/12/1/10/1/6/2:216)" end="OEBPS/ch02.html#point(/1/2/1/1/12/1/10/1/6/2:460)"><text> Optimizing bandwidth isn’t just about cost:
+centralized traffic engineering has been shown to solve a number of
+problems that are traditionally extremely difficult to solve through a
+combination of distributed routing and traffic engineering</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:20:30Z</dc:date><dc:title>2016-04-23T16:20:30Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/14/1/6/1/3:2)" end="OEBPS/ch02.html#point(/1/2/1/1/14/1/6/1/5:1)"><text>The Chubby [Bur06] lock service provides a filesystem-like API
+for maintaining locks. Chubby handles these locks across
+datacenter locations. It uses the Paxos protocol for asynchronous
+Consensus (see Chapter 23).
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:23:35Z</dc:date><dc:title>2016-04-23T16:23:35Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/16/1/9:1)" end="OEBPS/ch02.html#point(/1/2/1/1/16/1/10/7:249)"><text>
+ Data is transferred to and from an RPC using protocol
+buffers,4
+often abbreviated to “protobufs,” which are similar to Apache’s
+Thrift. Protocol buffers have many advantages over XML for serializing
+structured data: they are simpler to use, 3 to 10 times smaller, 20 to
+100 times faster, and less ambiguous</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><dc:date>2016-04-23T16:33:15Z</dc:date><dc:title>2016-04-23T16:33:15Z</dc:title><target><fragment start="OEBPS/ch02.html#point(/1/2/1/1/20/1/22/1/9:1)" end="OEBPS/ch02.html#point(/1/2/1/1/20/1/22/1/11:1)"><text>
+ Because the backends need to contact the Bigtable holding the data, we need
+to also design this storage element strategically. A backend in Asia
+contacting a Bigtable in the USA adds a significant amount of latency,
+so we replicate the Bigtable in each region. Bigtable replication
+helps us in two ways: it provides resilience should a Bigtable server
+fail, and it lowers data-access latency. While Bigtable only offers
+eventual consistency, it isn’t a major problem because we don’t need to
+update the contents often.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part02.html#point(/1/2/1/4/7:2)" end="OEBPS/part02.html#point(/1/2/1/4/8/1:55)"><text>Eliminating toil is one of SRE’s most
+important tasks</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part02.html#point(/1/2/1/4/15:2)" end="OEBPS/part02.html#point(/1/2/1/4/16/1:184)"><text>A key principle of any effective software engineering, not only
+reliability-oriented engineering, simplicity is a
+quality that, once lost, can be extraordinarily difficult to recapture</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part02.html#point(/1/2/1/4/20/3:78)" end="OEBPS/part02.html#point(/1/2/1/4/21:0)"><text>In “Making Push On Green a Reality” [Kle14], published in October 2014, we show that taking humans out of the
+release process can paradoxically reduce SREs’ toil while increasing
+system reliability.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/8/3:738)" end="OEBPS/ch03.html#point(/1/2/1/1/8/3:860)"><text>Put simply, a user on a 99% reliable smartphone
+cannot tell the difference between 99.99% and 99.999% service
+reliability!</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/14/1/8/1/12/1/4/2:137)" end="OEBPS/ch03.html#point(/1/2/1/1/14/1/8/1/12/1/4/2:363)"><text> Which is worse for the service: a constant low rate of
+failures, or an occasional full-site outage? Both types of failure may
+result in the same absolute number of errors, but may have vastly
+different impacts on the business</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/14/1/8/1/14/1/13:2)" end="OEBPS/ch03.html#point(/1/2/1/1/14/1/8/1/14/1/14/1:209)"><text>It may be harder to set these targets when we do not have a simple translation
+function between reliability and revenue. One useful
+strategy may be to consider the background error rate of ISPs on the
+Internet</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/16/1/8/4:169)" end="OEBPS/ch03.html#point(/1/2/1/1/16/1/8/4:475)"><text> Product development performance is largely evaluated on
+product velocity, which creates an incentive to push new code as quickly as
+possible. Meanwhile, SRE performance is (unsurprisingly) evaluated based upon reliability
+of a service, which implies an incentive to push back against a high rate of
+change</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/16/1/13:2)" end="OEBPS/ch03.html#point(/1/2/1/1/16/1/14/1:338)"><text>Usually, preexisting teams have worked out some kind of informal balance between
+them as to where the risk/effort boundary lies. Unfortunately, one can rarely prove that this balance is optimal, rather than just a function of the negotiating skills of the engineers involved. Nor should such decisions be driven by politics, fear,
+or hope</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/16/1/14/1:339)" end="OEBPS/ch03.html#point(/1/2/1/1/16/1/14/1:409)"><text> (Indeed, Google SRE’s unofficial motto is “Hope is not a
+strategy</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch03.html#point(/1/2/1/1/16/1/16/1/4/4:2)" end="OEBPS/ch03.html#point(/1/2/1/1/16/1/16/1/5:0)"><text> The error budget
+provides a clear, objective metric that determines how unreliable the
+service is allowed to be within a single quarter. This metric removes
+the politics from negotiations between the SREs and the product
+developers when deciding how much risk to allow.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch04.html#point(/1/2/1/1/18/1/4/2:331)" end="OEBPS/ch04.html#point(/1/2/1/1/18/1/4/2:506)"><text>As a result,
+we’ve sometimes found that working from desired objectives backward
+to specific indicators works better than choosing indicators and then
+coming up with targets</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch04.html#point(/1/2/1/1/18/1/8/1/6/4/1:1)" end="OEBPS/ch04.html#point(/1/2/1/1/18/1/8/1/6/4/2/3:0)"><text>While
+understanding the merits and limits of a system is essential,
+adopting values without reflection may lock you into supporting a
+system that requires heroic efforts to meet its targets, and that
+cannot be improved without significant redesign</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch04.html#point(/1/2/1/1/18/1/8/1/8/1:141)" end="OEBPS/ch04.html#point(/1/2/1/1/18/1/8/1/8/1:420)"><text>A good SLO is a helpful, legitimate forcing function for a
+development team.  But a poorly thought-out SLO can result in wasted
+work if a team uses heroic efforts to meet an overly aggressive SLO,
+or a bad product if the SLO is too lax.  SLOs are a massive lever: use
+them wisely</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch05.html#point(/1/2/1/1/7:1)" end="OEBPS/ch05.html#point(/1/2/1/1/8/5:0)"><text>
+ If a human operator needs to touch your system during normal operations, you have a bug.  The definition of normal changes as your systems grow.
+ Carla Geisser, Google SRE</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch05.html#point(/1/2/1/1/18/1/6/1:280)" end="OEBPS/ch05.html#point(/1/2/1/1/18/1/6/1:428)"><text> Toil becomes toxic when experienced in large quantities.  If you’re
+burdened with too much toil, you should be very concerned and
+complain loudly</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch05.html#point(/1/2/1/1/20/1/3:2)" end="OEBPS/ch05.html#point(/1/2/1/1/20/1/4/1:304)"><text>If we all commit to eliminate a bit of toil each week
+with some good engineering, we’ll steadily clean up our
+services, and we can shift our collective efforts to engineering for
+scale, architecting the next generation of services, and building
+cross-SRE toolchains.  Let’s invent more, and toil less</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch06.html#point(/1/2/1/1/30/1/5:2)" end="OEBPS/ch06.html#point(/1/2/1/1/30/1/6/1:316)"><text>It’s important that decisions about monitoring be made with long-term
+goals in mind. Every page that happens today distracts a human from
+improving the system for tomorrow, so there is often a case for taking
+a short-term hit to availability or performance in order to improve
+the long-term outlook for the system.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch06.html#point(/1/2/1/1/30/1/10/1/9:1)" end="OEBPS/ch06.html#point(/1/2/1/1/30/1/10/1/10/1:454)"><text>
+ This kind of tension is common within a team, and often reflects an underlying mistrust of the team’s self-discipline: while some team members want to implement a “hack” to allow time for a proper fix, others worry that a hack will be forgotten or that the proper fix will be deprioritized indefinitely. This concern is credible, as it’s easy to build layers of unmaintainable technical debt by patching over problems instead of making real fixes</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch06.html#point(/1/2/1/1/30/1/10/1/11:2)" end="OEBPS/ch06.html#point(/1/2/1/1/30/1/10/1/13:0)"><text>Pages with rote, algorithmic responses should be a red flag.
+Unwillingness on the part of your team to automate such pages implies
+that the team lacks confidence that they can clean up their technical
+debt. This is a major problem worth escalating.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/12/1/6/1/4/8:201)" end="OEBPS/ch07.html#point(/1/2/1/1/12/1/6/1/4/8:411)"><text>For a start, any action performed by a human or humans hundreds of times won’t be performed the same way each time: even with the best will in the world, very few of us will ever be as consistent as a machine</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/12/1/10/1/4/2:494)" end="OEBPS/ch07.html#point(/1/2/1/1/12/1/10/1/4/4:0)"><text> As is well understood in the industry, the later in the product lifecycle a problem is discovered, the more expensive it is to fix; see Chapter 17</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/14/1/6/3:263)" end="OEBPS/ch07.html#point(/1/2/1/1/14/1/6/3:561)"><text>We have built APIs for systems when no API was available from the vendor. Even though purchasing software for a particular task would have been much cheaper in the short term, we chose to write our own solutions, because doing so produced APIs with the potential for much greater long-term benefits</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/16/1/4/5:187)" end="OEBPS/ch07.html#point(/1/2/1/1/16/1/4/5:278)"><text>More broadly, in this view, automation is “meta-software”—software to act on software</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/20/1/15:2)" end="OEBPS/ch07.html#point(/1/2/1/1/20/1/17:1)"><text>Early automation focused on accelerating cluster delivery. This approach tended to rely upon creative use of SSH for tedious package distribution and service initialization problems. This strategy was an initial win, but those free-form scripts became a cholesterol of technical debt.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch07.html#point(/1/2/1/1/22/1/16/5:283)" end="OEBPS/ch07.html#point(/1/2/1/1/22/1/17:1)"><text>To echo the words of Ben Treynor Sloss: by taking the approach that this was a software problem, the initial automation bought us enough time to turn cluster management into something autonomous, as opposed to automated. We achieved this goal by bringing ideas related to data distribution, APIs, hub-and-spoke architectures, and classic distributed system software development to bear upon the domain of infrastructure management.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch08.html#point(/1/2/1/1/22/1/8/1/5:1)" end="OEBPS/ch08.html#point(/1/2/1/1/22/1/8/1/7:1)"><text>
+ Teams should budget for release engineering resources at the beginning
+of the product development cycle. It’s cheaper to put good practices
+and process in place early, rather than have to retrofit your system
+later.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch08.html#point(/1/2/1/1/22/1/8/1/7:2)" end="OEBPS/ch08.html#point(/1/2/1/1/22/1/8/1/8/1:78)"><text>It is essential that the developers, SREs, and release engineers work
+together</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/8/1:1)" end="OEBPS/ch09.html#point(/1/2/1/1/9:0)"><text>The price of reliability is the pursuit of the utmost simplicity.
+ C.A.R. Hoare, Turing Award lecture
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/10/5:382)" end="OEBPS/ch09.html#point(/1/2/1/1/10/5:474)"><text>“At the end of the day, our
+job is to keep agility and stability in balance in the
+system.</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/12/1/3:2)" end="OEBPS/ch09.html#point(/1/2/1/1/12/1/4/3:350)"><text>It sometimes makes sense to
+sacrifice stability for the sake of agility. I’ve often approached an
+unfamiliar problem domain by conducting what I call exploratory
+coding—setting an explicit shelf life for whatever code I write with
+the understanding that I’ll need to try and fail once in order to
+really understand the task I need to accomplish</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/14/1/3:2)" end="OEBPS/ch09.html#point(/1/2/1/1/14/1/4/2:115)"><text>Unlike just about everything else in life,
+“boring” is actually a positive attribute when it comes to
+software!</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/14/1/4/2:310)" end="OEBPS/ch09.html#point(/1/2/1/1/14/1/4/2:436)"><text>“Unlike a detective story, the lack of
+excitement, suspense, and puzzles is actually a desirable property of
+source code.”</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/16/1/5:2)" end="OEBPS/ch09.html#point(/1/2/1/1/16/1/6/1:166)"><text>At the risk of sounding
+extreme, when you consider a web service that’s expected to be
+available 24/7, to some extent, every new line of code written is a
+liability</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch09.html#point(/1/2/1/1/26/1/4/2:297)" end="OEBPS/ch09.html#point(/1/2/1/1/27:0)"><text> Every time we say
+“no” to a feature, we are not restricting
+innovation; we are keeping the environment uncluttered of distractions
+so that focus remains squarely on innovation, and real engineering can
+proceed.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part03.html#point(/1/2/1/4/21:2)" end="OEBPS/part03.html#point(/1/2/1/4/22/5:97)"><text>During an incident, it’s often tempting to give in to adrenalin and start
+responding ad hoc. We advise against this temptation in Chapter 13, Emergency Response, and
+counsel in Chapter 14, Managing Incidents, that managing incidents effectively should
+reduce their impact and limit outage-induced anxiety</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part03.html#point(/1/2/1/4/27:2)" end="OEBPS/part03.html#point(/1/2/1/4/29:1)"><text>Building a blameless postmortem culture is the
+first step in understanding what went wrong (and what went right!), as described in Chapter 15, Postmortem Culture: Learning from Failure.
+</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/part03.html#point(/1/2/1/4/33:2)" end="OEBPS/part03.html#point(/1/2/1/4/34/2:141)"><text>Once we understand what tends to go wrong, our next step is attempting to prevent it, because an ounce of prevention is worth a pound of cure</text></fragment></target><content><text></text></content></annotation><annotation color="#EE00EE"><target><fragment start="OEBPS/ch10.html#point(/1/2/1/1/19:2)" end="OEBPS/ch10.html#point(/1/2/1/1/20/2:531)"><text>At the scale our systems operate, being alerted for single-machine
+failures is unacceptable because such data is too noisy to be actionable.
+Instead we try to build systems that are robust against failures in
+the systems they depend on.  Rather than requiring management of many
+individual components, a large system should be designed to aggregate
+signals and prune outliers. We need monitoring systems that allow us
+to alert for high-level service objectives, but retain the granularity
+to inspect individual components as needed</text></fragment></target><content><text></text></content></annotation></annotationSet>
