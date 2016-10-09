@@ -8,16 +8,16 @@ import java.util.List;
  * Created by vitorfernandes on 10/8/16.
  */
 public class CybookAnnotation extends BookAnnotation{
-    private final String book;
+    private final String bookURI;
     private final List<String> annotation;
 
-    public CybookAnnotation(String book,List<String> annotations){
-        this.book=book;
+    public CybookAnnotation(String bookURI,List<String> annotations){
+        this.bookURI=bookURI;
         this.annotation=annotations;
     }
 
-    public String getBook() {
-        return book;
+    public String getBookURI() {
+        return bookURI;
     }
 
     public List<String> getAnnotation() {

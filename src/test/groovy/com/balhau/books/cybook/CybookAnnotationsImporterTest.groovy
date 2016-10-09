@@ -18,8 +18,8 @@ class CybookAnnotationsImporterTest extends Specification{
     def "Test annotation loading"(){
         def bookAnnotations;
         when:
-            bookAnnotations=victim.getBookAnnotations()
+        bookAnnotations=victim.getBookAnnotations()
         then:
-            bookAnnotations.size()>0
+        bookAnnotations.size()>0
     }
 }
