@@ -1,11 +1,13 @@
 package org.balhau.books.cybook.domain;
 
+import org.balhau.books.domain.WithSerialization;
+
 import java.util.List;
 
 /** Domain object for a cybook set of annotations
  * Created by vitorfernandes on 10/8/16.
  */
-public class CybookAnnotation{
+public class CybookAnnotation implements WithSerialization{
     private final String bookURI;
     private final List<String> annotation;
 
