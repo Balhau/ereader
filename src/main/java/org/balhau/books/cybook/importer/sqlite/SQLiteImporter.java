@@ -1,6 +1,7 @@
 package org.balhau.books.cybook.importer.sqlite;
 
 import org.balhau.books.cybook.domain.CybookBook;
+import org.balhau.books.cybook.domain.SQLImporter;
 import org.balhau.books.domain.ReaderSQLException;
 
 import java.sql.Connection;
@@ -15,7 +16,7 @@ import static org.balhau.books.utils.SqliteUtils.*;
 /**
  * Created by vitorfernandes on 10/9/16.
  */
-public class SQLiteImporter {
+public class SQLiteImporter implements SQLImporter{
 
     //Queries
     private static final String READING_BOOKS_QUERY="select\n" +
@@ -48,6 +49,7 @@ public class SQLiteImporter {
      * This will return a list of books that are currently being readed
      * @return
      */
+    @Override
     public List<CybookBook> getReadingBooks() throws ReaderSQLException{
         try{
             List<CybookBook> books=new ArrayList<>();

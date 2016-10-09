@@ -1,8 +1,7 @@
 package org.balhau.books.cybook.importer.annotations;
 
+import org.balhau.books.cybook.domain.AnnotationsImporter;
 import org.balhau.books.cybook.domain.CybookAnnotation;
-import org.balhau.books.domain.AnnotationsImporter;
-import org.balhau.books.domain.BookAnnotation;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -13,9 +12,12 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
+ *
  * Created by vitorfernandes on 10/8/16.
  */
 public class CybookAnnotationsImporter implements AnnotationsImporter{
@@ -31,18 +33,18 @@ public class CybookAnnotationsImporter implements AnnotationsImporter{
     }
 
     @Override
-    public List<BookAnnotation> getBookAnnotations() {
+    public Map<String,CybookAnnotation> getBooksAnnotations() {
 
-        List<BookAnnotation> annotations = new ArrayList<>();
-
-
-            File annotationFile = new File(rootPath);
-            File[] bookDirectories=annotationFile.listFiles();
-            File bookFile;
-            for(File directory : bookDirectories){
-                bookFile=directory.listFiles()[0];
-                annotations.add(parseFile(bookFile));
-            }
+        Map<String,CybookAnnotation> annotations = new HashMap<>();
+        File annotationFile = new File(rootPath);
+        File[] bookDirectories=annotationFile.listFiles();
+        File bookFile;
+        CybookAnnotation annotation;
+        for(File directory : bookDirectories){
+            bookFile=directory.listFiles()[0];
+            annotation=parseFile(bookFile);
+            annotations.put(annotation.getBookURI(),annotation);
+        }
 
         return annotations;
     }
@@ -62,9 +64,7 @@ public class CybookAnnotationsImporter implements AnnotationsImporter{
                     aList.add(aux.getTextContent());
                 }catch (Exception ex){}
             }
-        }catch(Exception ex){
-
-        }
+        }catch(Exception ex){}
 
         return new CybookAnnotation(bookFile.getPath(),aList);
     }

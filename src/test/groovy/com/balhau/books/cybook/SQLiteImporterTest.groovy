@@ -9,7 +9,7 @@ import java.sql.SQLClientInfoException
 /**
  * Created by vitorfernandes on 10/9/16.
  */
-class CybookSQLImporterTest extends Specification{
+class SQLiteImporterTest extends Specification{
     private sqlitePath=this.getClass().getClassLoader().getResource("cybook/system/library").path
     private victim
 

@@ -3,9 +3,11 @@ package org.balhau.books.cybook.domain;
 import org.balhau.books.domain.Ebook;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 /**
- *
+ * Cybook domain object and respective builder as inner static class
  * Created by vitorfernandes on 10/9/16.
  */
 public class CybookBook extends Ebook{
@@ -22,8 +24,24 @@ public class CybookBook extends Ebook{
         private Date lastread;
         private String publicationDate;
         private String publisher;
+        private Optional<CybookAnnotation> annotations;
 
         public Builder(){}
+
+        public Builder(CybookBook copyfrom){
+            this.author=copyfrom.author;
+            this.title=copyfrom.title;
+            this.description=copyfrom.description;
+            this.readed=copyfrom.readed;
+            this.bookID=copyfrom.bookID;
+            this.bookURI=copyfrom.bookURI;
+            this.pages=copyfrom.pages;
+            this.currpage=copyfrom.currpage;
+            this.lastread=copyfrom.lastread;
+            this.publicationDate=copyfrom.publicationDate;
+            this.publisher=copyfrom.publisher;
+            this.annotations=copyfrom.annotations;
+        }
 
         public Builder Author(String author){
             this.author=author;
@@ -40,12 +58,13 @@ public class CybookBook extends Ebook{
         public Builder LastRead(Date lastread){this.lastread=lastread;return this;}
         public Builder PublicationDate(String publicationDate){this.publicationDate=publicationDate;return this;}
         public Builder Publisher(String publisher){this.publisher=publisher;return this;}
+        public Builder Annotations(Optional<CybookAnnotation> annotations){this.annotations=annotations;return this;}
 
         public CybookBook build(){
             return new CybookBook(
                 bookID,bookURI,pages,currpage,lastread,
                 publicationDate,publisher,author,title,
-                description,readed
+                description,readed,annotations
             );
         }
     }
@@ -58,11 +77,12 @@ public class CybookBook extends Ebook{
     private final Date lastread;
     private final String publicationDate;
     private final String publisher;
+    private final Optional<CybookAnnotation> annotations;
 
     public CybookBook(
             int bookID,String bookURI,int pages,int currpage,Date lastread,
             String publicationDate,String publisher,String author,String title,
-            String description,boolean readed
+            String description,boolean readed,Optional<CybookAnnotation> annotations
     ){
         super(title,description,author);
         this.bookID=bookID;this.bookURI=bookURI;
@@ -70,6 +90,7 @@ public class CybookBook extends Ebook{
         this.lastread=lastread;this.publicationDate=publicationDate;
         this.publisher=publisher;
         this.readed=readed;
+        this.annotations=annotations;
     }
 
     public int getBookID() {
@@ -102,5 +123,9 @@ public class CybookBook extends Ebook{
 
     public String getPublisher() {
         return publisher;
+    }
+
+    public Optional<CybookAnnotation> getAnnotations() {
+        return annotations;
     }
 }

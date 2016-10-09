@@ -8,18 +8,18 @@ import spock.lang.Specification
  */
 class CybookAnnotationsImporterTest extends Specification{
 
+    private rootPath=this.getClass().getClassLoader().getResource("cybook/annotations").path
     private CybookAnnotationsImporter victim;
 
     def setup(){
-        def rootPath=this.getClass().getClassLoader().getResource("cybook/annotations").path
         victim=new CybookAnnotationsImporter(rootPath)
     }
 
     def "Test annotation loading"(){
         def bookAnnotations;
         when:
-        bookAnnotations=victim.getBookAnnotations()
+            bookAnnotations=victim.getBooksAnnotations()
         then:
-        bookAnnotations.size()>0
+            bookAnnotations.size()>0
     }
 }

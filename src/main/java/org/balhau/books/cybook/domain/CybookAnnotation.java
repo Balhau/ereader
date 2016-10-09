@@ -1,13 +1,11 @@
 package org.balhau.books.cybook.domain;
 
-import org.balhau.books.domain.BookAnnotation;
-
 import java.util.List;
 
 /** Domain object for a cybook set of annotations
  * Created by vitorfernandes on 10/8/16.
  */
-public class CybookAnnotation extends BookAnnotation{
+public class CybookAnnotation{
     private final String bookURI;
     private final List<String> annotation;
 
