@@ -22,7 +22,7 @@ public class SQLiteImporter implements SQLImporter{
     private static final String READING_BOOKS_QUERY="select\n" +
             "  f_id_item, f_pages_number, f_current_page, f_last_read,\n" +
             "  f_publication_date,f_publisher,f_title,f_description,\n" +
-            "  f_internal_uri,f_name,f_islastpage\n" +
+            "  f_internal_uri,f_name,f_islastpage,f_documenttime\n" +
             "   from T_ITEM as I INNER JOIN T_AUTHOR as A\n" +
             "where I.f_current_page != -1 and I.f_author_id==A.f_id_author;";
 
@@ -61,7 +61,7 @@ public class SQLiteImporter implements SQLImporter{
                 b.BookId(rs.getInt(1));
                 b.Pages(rs.getInt(2));
                 b.CurrentPage(rs.getInt(3));
-                b.LastRead(new Date(rs.getInt(4)));
+                b.LastRead(new Date(rs.getInt(4)*1000L));
                 b.PublicationDate(rs.getString(5));
                 b.Publisher(rs.getString(6));
                 b.Title(rs.getString(7));
@@ -69,6 +69,7 @@ public class SQLiteImporter implements SQLImporter{
                 b.BookURI(rs.getString(9));
                 b.Author(rs.getString(10));
                 b.IsReaded(rs.getInt(11)==1?true:false);
+                b.DocumentTime(new Date(rs.getInt(12)*1000L));
                 books.add(b.build());
             }
             return books;

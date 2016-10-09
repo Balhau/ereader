@@ -25,6 +25,7 @@ public class CybookBook extends Ebook{
         private String publicationDate;
         private String publisher;
         private Optional<CybookAnnotation> annotations;
+        private Date documentTime;
 
         public Builder(){}
 
@@ -41,6 +42,7 @@ public class CybookBook extends Ebook{
             this.publicationDate=copyfrom.publicationDate;
             this.publisher=copyfrom.publisher;
             this.annotations=copyfrom.annotations;
+            this.documentTime=copyfrom.documentTime;
         }
 
         public Builder Author(String author){
@@ -59,12 +61,13 @@ public class CybookBook extends Ebook{
         public Builder PublicationDate(String publicationDate){this.publicationDate=publicationDate;return this;}
         public Builder Publisher(String publisher){this.publisher=publisher;return this;}
         public Builder Annotations(Optional<CybookAnnotation> annotations){this.annotations=annotations;return this;}
+        public Builder DocumentTime(Date documentTime){this.documentTime=documentTime;return this;}
 
         public CybookBook build(){
             return new CybookBook(
                 bookID,bookURI,pages,currpage,lastread,
                 publicationDate,publisher,author,title,
-                description,readed,annotations
+                description,readed,annotations,documentTime
             );
         }
     }
@@ -78,11 +81,12 @@ public class CybookBook extends Ebook{
     private final String publicationDate;
     private final String publisher;
     private final Optional<CybookAnnotation> annotations;
+    private final Date documentTime;
 
     public CybookBook(
             int bookID,String bookURI,int pages,int currpage,Date lastread,
             String publicationDate,String publisher,String author,String title,
-            String description,boolean readed,Optional<CybookAnnotation> annotations
+            String description,boolean readed,Optional<CybookAnnotation> annotations,Date documentTime
     ){
         super(title,description,author);
         this.bookID=bookID;this.bookURI=bookURI;
@@ -91,6 +95,7 @@ public class CybookBook extends Ebook{
         this.publisher=publisher;
         this.readed=readed;
         this.annotations=annotations;
+        this.documentTime=documentTime;
     }
 
     public int getBookID() {
@@ -127,5 +132,9 @@ public class CybookBook extends Ebook{
 
     public Optional<CybookAnnotation> getAnnotations() {
         return annotations;
+    }
+
+    public Date getDocumentTime() {
+        return documentTime;
     }
 }
