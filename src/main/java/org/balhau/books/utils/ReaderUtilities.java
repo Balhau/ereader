@@ -9,7 +9,11 @@ import java.util.Properties;
  */
 public class ReaderUtilities {
 
-
+	/**
+	 * Static method to load properties from {@link InputStream}
+	 * @param {@link InputStream} stream Input stream from which we want to load properties
+	 * @return {@link Properties} with all the information presented in the InputStream
+	 */
     public static Properties getProperties(InputStream stream){
     try{
         //load a properties file from class path, inside static method

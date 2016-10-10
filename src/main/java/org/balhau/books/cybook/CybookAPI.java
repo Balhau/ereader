@@ -7,14 +7,9 @@ import org.balhau.books.cybook.domain.SQLImporter;
 import org.balhau.books.domain.ReaderSQLException;
 
 import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-/**
- * Created by vitorfernandes on 10/9/16.
- */
+
 public class CybookAPI {
     private AnnotationsImporter annotationsImporter;
     private SQLImporter sqlImporter;

@@ -1,8 +1,7 @@
 package org.balhau.books.domain;
 
 /**
- * Base container for ebooks
- * Created by vitorfernandes on 10/9/16.
+ * Base container for ebooks domain objects
  */
 public abstract class Ebook implements WithSerialization{
     protected final String title;

@@ -1,11 +1,13 @@
 package org.balhau.books.domain;
 
 /**
- * Created by vitorfernandes on 10/9/16.
+ * Typed exception for SQL operations
  */
 public class ReaderSQLException extends Exception {
 
-    public ReaderSQLException(String message){
+	private static final long serialVersionUID = 4803262425012154019L;
+
+	public ReaderSQLException(String message){
         super(message);
     }
 

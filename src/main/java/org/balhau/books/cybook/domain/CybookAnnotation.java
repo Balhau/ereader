@@ -4,8 +4,8 @@ import org.balhau.books.domain.WithSerialization;
 
 import java.util.List;
 
-/** Domain object for a cybook set of annotations
- * Created by vitorfernandes on 10/8/16.
+/** 
+ * Domain object for a Cybook set of annotations
  */
 public class CybookAnnotation implements WithSerialization{
     private final String bookURI;
