@@ -15,10 +15,20 @@
     <groovy.version>0.6-groovy-1.8</groovy.version>
     <sqlite.jdbc.version>3.7.2</sqlite.jdbc.version>
     <gson.version>2.2.4</gson.version>
+    <jacoco.version>0.7.7.201606060606</jacoco.version>
+    <!-- Jacoco code coverage tresholds -->
+    <jacoco.branchRatio>0</jacoco.branchRatio>
+    <jacoco.lineRatio>0</jacoco.lineRatio>
+    <codeCoverageHaltOnFailure>true</codeCoverageHaltOnFailure>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.spockframework</groupId>
         <artifactId>spock-core</artifactId>
@@ -55,6 +65,81 @@
 
   <build>
     <plugins>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <configuration>
+          <destFile>${basedir}/target/coverage-reports/jacoco-unit.exec</destFile>
+          <dataFile>${basedir}/target/coverage-reports/jacoco-unit.exec</dataFile>
+        </configuration>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>check</id>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <!-- All classes must have 80% line and branch coverage . Note we use 2 d.p so that we get can any check failure messages reported to 2 d.p  -->
+                <rule >
+                  <element>CLASS</element>
+                  <limits>
+                    <limit >
+                      <counter>LINE</counter>
+                      <value>COVEREDRATIO</value>
+                      <minimum>${jacoco.lineRatio}</minimum>
+                    </limit>
+                    <limit >
+                      <counter>BRANCH</counter>
+                      <value>COVEREDRATIO</value>
+                      <minimum>${jacoco.branchRatio}</minimum>
+                    </limit>
+                  </limits>
+                  <excludes>
+                    <exclude>com.choudhury.codecoverage.Bye</exclude>
+                  </excludes>
+                </rule>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

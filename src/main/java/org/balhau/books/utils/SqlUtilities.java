@@ -14,8 +14,8 @@ public class SqlUtilities {
 
     /**
      * Utility method to encapsulate {@link Connection} creation for SQLite databses
-     * @param path
-     * @return
+     * @param path {@link String} Path of the sqlite file
+     * @return connection {@link Connection} Sql connection object
      * @throws SQLException
      * @throws ClassNotFoundException
      */
