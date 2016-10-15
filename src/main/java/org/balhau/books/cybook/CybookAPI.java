@@ -18,7 +18,7 @@ public class CybookAPI {
     }
 
     public List<CybookBook> getOnlyBooksWithAnnotations() throws ReaderSQLException{
-        List<CybookBook> booksWithAnnotations=getReadedBooksWithAnnotations();
+        List<CybookBook> booksWithAnnotations=getReadedBooksWithAnnotationsIfPresent();
         return booksWithAnnotations.stream()
                 .filter(book -> book.getAnnotations().isPresent())
                 .collect(Collectors.toList());
@@ -28,7 +28,7 @@ public class CybookAPI {
         return this.sqlImporter.getAuthors();
     }
 
-    public List<CybookBook> getReadedBooksWithAnnotations() throws ReaderSQLException{
+    public List<CybookBook> getReadedBooksWithAnnotationsIfPresent() throws ReaderSQLException{
         List<CybookBook> readingBooks = this.sqlImporter.getReadingBooks();
         List<CybookBook> readingBooksWithAnnotations=new ArrayList<>(readingBooks.size());
         Map<String,CybookAnnotation> annotationMap = this.annotationsImporter.getBooksAnnotations();

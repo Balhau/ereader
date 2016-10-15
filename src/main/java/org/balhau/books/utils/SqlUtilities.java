@@ -16,8 +16,8 @@ public final class SqlUtilities {
      * Utility method to encapsulate {@link Connection} creation for SQLite databses
      * @param path {@link String} Path of the sqlite file
      * @return connection {@link Connection} Sql connection object
-     * @throws SQLException
-     * @throws ClassNotFoundException
+     * this @throws {@link SQLException} SQL exception
+     * this @throws {@link ClassNotFoundException} Class not found exception
      */
     public static Connection getSQLiteConnection(String path) throws SQLException, ClassNotFoundException{
         Class.forName(SQLITE_JDBC);

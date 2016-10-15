@@ -25,7 +25,9 @@ public class CybookBook extends Ebook{
         private Optional<CybookAnnotation> annotations;
         private Date documentTime;
 
-        public Builder(){}
+        public Builder(){
+            this.annotations = Optional.empty();
+        }
 
         public Builder(CybookBook copyfrom){
             this.author=copyfrom.author;

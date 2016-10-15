@@ -26,9 +26,11 @@ class CybookAPITest extends Specification{
 
     def "Get all reading books with annotations if presented"(){
         when:
-            List<CybookBook> readingBooksWithAnnotations = victim.getReadedBooksWithAnnotations()
+            List<CybookBook> readingBooksWithAnnotations = victim.getReadedBooksWithAnnotationsIfPresent()
         then:
             readingBooksWithAnnotations.size()>100
+            CybookBook b = readingBooksWithAnnotations.get(0)
+            b.annotations.isPresent() == false
     }
 
     def "Get only those books with annotations"(){
@@ -36,6 +38,10 @@ class CybookAPITest extends Specification{
             List<CybookBook> readingBooksOnlyWithAnnotations=victim.getOnlyBooksWithAnnotations()
         then:
             readingBooksOnlyWithAnnotations.size()>0 && readingBooksOnlyWithAnnotations.size()<10
+            CybookBook b = readingBooksOnlyWithAnnotations.get(0)
+            b.annotations.isPresent() == true
+            b.annotations.get().getAnnotation().size()>0
+            b.annotations.get().getAnnotation().get(0) != ""
     }
 
 
@@ -44,6 +50,8 @@ class CybookAPITest extends Specification{
             List<CybookAuthor> authors = victim.getAuthors()
         then:
             authors.size()>0
+            authors.get(0).getId() > 0
+            authors.get(0).getName() != null
     }
 
 

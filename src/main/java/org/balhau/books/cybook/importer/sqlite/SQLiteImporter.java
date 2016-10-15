@@ -54,7 +54,7 @@ public class SQLiteImporter implements SQLImporter{
 
     /**
      * This will return a list of books that are currently being readed
-     * @return
+     * @return {@link List} List of books
      */
     @Override
     public List<CybookBook> getReadingBooks() throws ReaderSQLException{

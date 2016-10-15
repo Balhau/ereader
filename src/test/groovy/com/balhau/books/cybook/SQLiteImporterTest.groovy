@@ -27,6 +27,15 @@ class SQLiteImporterTest extends Specification{
             b.getDescription() == ""
             b.getAuthor() != ""
             b.getTitle() != ""
+            b.getBookURI() != ""
+            b.getCurrpage() != ""
+            b.getAnnotations() != null
+            b.getLastread() != null
+            b.getPublicationDate() != null
+            b.getPublisher() == ""
+            b.isReaded() == true
+            b.getDocumentTime() != null
+            b.getPages() > 0
             b.toJSON() != ""
     }
 }
