@@ -1,16 +1,11 @@
 package org.balhau.books.cybook;
 
-import org.balhau.books.cybook.domain.AnnotationsImporter;
-import org.balhau.books.cybook.domain.CybookAnnotation;
-import org.balhau.books.cybook.domain.CybookBook;
-import org.balhau.books.cybook.domain.SQLImporter;
-import org.balhau.books.domain.ReaderSQLException;
+import org.balhau.books.cybook.domain.*;
+import org.balhau.books.domain.exceptions.InvalidArgumentException;
+import org.balhau.books.domain.exceptions.ReaderSQLException;
 
 import java.util.*;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by vitorfernandes on 10/9/16.
@@ -31,6 +26,10 @@ public class CybookAPI {
                 .collect(Collectors.toList());
     }
 
+    public List<CybookAuthor> getAuthors() throws ReaderSQLException {
+        return this.sqlImporter.getAuthors();
+    }
+
     public List<CybookBook> getReadedBooksWithAnnotations() throws ReaderSQLException{
         List<CybookBook> readingBooks = this.sqlImporter.getReadingBooks();
         List<CybookBook> readingBooksWithAnnotations=new ArrayList<>(readingBooks.size());
@@ -46,6 +45,10 @@ public class CybookAPI {
             );
         }
         return readingBooksWithAnnotations;
+    }
+
+    public List<CybookBook> getBooksByAuthor(CybookAuthor author) throws ReaderSQLException,InvalidArgumentException {
+        return this.sqlImporter.getBooksByAuthor(author);
     }
 
     private String getPossibleKey(Set<String> keys,String possibleKey){

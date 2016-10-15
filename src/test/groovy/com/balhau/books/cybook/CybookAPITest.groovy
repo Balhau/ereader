@@ -1,6 +1,7 @@
 package com.balhau.books.cybook
 
 import org.balhau.books.cybook.CybookAPI
+import org.balhau.books.cybook.domain.CybookAuthor
 import org.balhau.books.cybook.domain.CybookBook
 import org.balhau.books.cybook.importer.annotations.CybookAnnotationsImporter
 import org.balhau.books.cybook.importer.sqlite.SQLiteImporter
@@ -35,6 +36,24 @@ class CybookAPITest extends Specification{
             List<CybookBook> readingBooksOnlyWithAnnotations=victim.getOnlyBooksWithAnnotations()
         then:
             readingBooksOnlyWithAnnotations.size()>0 && readingBooksOnlyWithAnnotations.size()<10
+    }
+
+
+    def "Get author list"(){
+        when:
+            List<CybookAuthor> authors = victim.getAuthors()
+        then:
+            authors.size()>0
+    }
+
+
+    def "Get books by author"(){
+        when:
+            List<CybookAuthor> authors = victim.getAuthors()
+            List<CybookBook> booksByAuthor = victim.getBooksByAuthor(authors.get(1))
+        then:
+            authors.size() > 0
+            booksByAuthor.size() > 0
     }
 
 

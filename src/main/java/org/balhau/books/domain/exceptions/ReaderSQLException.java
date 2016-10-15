@@ -1,4 +1,4 @@
-package org.balhau.books.domain;
+package org.balhau.books.domain.exceptions;
 
 /**
  * Created by vitorfernandes on 10/9/16.
