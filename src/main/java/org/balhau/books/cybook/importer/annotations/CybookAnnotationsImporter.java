@@ -17,8 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
- * Created by vitorfernandes on 10/8/16.
+ * Implementation that retrieve annotations from the cybook data sources
  */
 public class CybookAnnotationsImporter implements AnnotationsImporter{
 

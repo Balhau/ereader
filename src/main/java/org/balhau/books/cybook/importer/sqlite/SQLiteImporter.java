@@ -9,7 +9,6 @@ import org.balhau.books.domain.exceptions.ReaderSQLException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -17,15 +16,11 @@ import java.util.List;
 import static org.balhau.books.utils.SqlUtilities.*;
 import static org.balhau.books.cybook.importer.sqlite.SQLiteQueries.*;
 /**
- * Created by vitorfernandes on 10/9/16.
+ * This implementation retrieve meaningful data from SQLite database presented in Cybook devices
  */
 public class SQLiteImporter implements SQLImporter{
 
 
-    private static final String DATE_FORMAT="yyyy-MM-dd'T'HH:mm:ss+hh:mm";
-
-    private final String path;
-    private final SimpleDateFormat format;
     private Connection conn;
 
     /**
@@ -33,8 +28,6 @@ public class SQLiteImporter implements SQLImporter{
      */
     public SQLiteImporter(String path) throws ReaderSQLException{
         try {
-            this.path = path;
-            this.format=new SimpleDateFormat(DATE_FORMAT);
             conn = getSQLiteConnection(path);
         }catch (Exception ex){
             throw new ReaderSQLException(ex);

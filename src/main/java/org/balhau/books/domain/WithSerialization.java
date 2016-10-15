@@ -3,7 +3,7 @@ package org.balhau.books.domain;
 import com.google.gson.Gson;
 
 /**
- * Created by vitorfernandes on 10/9/16.
+ * This enriches implementations with a default toString serialization mechanism
  */
 public interface WithSerialization {
     default String toJSON(){

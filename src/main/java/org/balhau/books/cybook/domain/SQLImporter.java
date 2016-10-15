@@ -6,7 +6,7 @@ import org.balhau.books.domain.exceptions.ReaderSQLException;
 import java.util.List;
 
 /**
- * Created by vitorfernandes on 10/9/16.
+ * This is a contract that all SQL importers should obey
  */
 public interface SQLImporter {
     List<CybookBook> getReadingBooks() throws ReaderSQLException;

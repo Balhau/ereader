@@ -3,12 +3,10 @@ package org.balhau.books.cybook.domain;
 import org.balhau.books.domain.Ebook;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
 
 /**
  * Cybook domain object and respective builder as inner static class
- * Created by vitorfernandes on 10/9/16.
  */
 public class CybookBook extends Ebook{
 

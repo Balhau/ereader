@@ -7,9 +7,7 @@ import org.balhau.books.domain.exceptions.ReaderSQLException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by vitorfernandes on 10/9/16.
- */
+
 public class CybookAPI {
     private AnnotationsImporter annotationsImporter;
     private SQLImporter sqlImporter;
