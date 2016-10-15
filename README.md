@@ -1,3 +1,5 @@
+![build status](https://travis-ci.org/Balhau/WebPtData.svg?branch=master)
+
 # EReader Utilities
 
 ## Introduction
