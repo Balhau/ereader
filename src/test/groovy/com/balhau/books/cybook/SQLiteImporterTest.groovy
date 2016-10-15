@@ -22,9 +22,11 @@ class SQLiteImporterTest extends Specification{
             List<CybookBook> readingbooks = victim.getReadingBooks()
         then:
             readingbooks.size()>0
-            readingbooks.get(0).getBookID()!=0
-            readingbooks.get(0).getDescription() == ""
-            readingbooks.get(0).getAuthor() != ""
-            readingbooks.get(0).getTitle() != ""
+            CybookBook b = readingbooks.get(0)
+            b.getBookID() != 0
+            b.getDescription() == ""
+            b.getAuthor() != ""
+            b.getTitle() != ""
+            b.toJSON() != ""
     }
 }

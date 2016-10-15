@@ -8,7 +8,7 @@ import java.sql.SQLException;
  * Bunch of utility classes needed for SQL operations
  * Created by vitorfernandes on 10/9/16.
  */
-public class SqlUtilities {
+public final class SqlUtilities {
     private static final String SQLITE_JDBC="org.sqlite.JDBC";
     private static final String SQLITE_CON_PREFIX="jdbc:sqlite:";
 
