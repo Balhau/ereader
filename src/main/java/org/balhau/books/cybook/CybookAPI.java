@@ -1,5 +1,6 @@
 package org.balhau.books.cybook;
 
+import com.sun.corba.se.impl.protocol.RequestCanceledException;
 import org.balhau.books.cybook.domain.*;
 import org.balhau.books.domain.exceptions.InvalidArgumentException;
 import org.balhau.books.domain.exceptions.ReaderSQLException;
@@ -47,6 +48,10 @@ public class CybookAPI {
 
     public List<CybookBook> getBooksByAuthor(CybookAuthor author) throws ReaderSQLException,InvalidArgumentException {
         return this.sqlImporter.getBooksByAuthor(author);
+    }
+
+    public List<CybookBook> getBooks() throws ReaderSQLException {
+        return this.sqlImporter.getBooks();
     }
 
     private String getPossibleKey(Set<String> keys,String possibleKey){

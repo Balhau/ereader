@@ -55,6 +55,16 @@ class CybookAPITest extends Specification{
     }
 
 
+    def "Get all books"(){
+        when:
+            List<CybookBook> allBooks = victim.getBooks()
+        then:
+            allBooks.size()>0
+            allBooks.get(0).getPages() > 0
+            allBooks.get(0).getTitle() != ""
+    }
+
+
     def "Get books by author"(){
         when:
             List<CybookAuthor> authors = victim.getAuthors()
@@ -63,6 +73,4 @@ class CybookAPITest extends Specification{
             authors.size() > 0
             booksByAuthor.size() > 0
     }
-
-
 }

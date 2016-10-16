@@ -34,6 +34,7 @@ public class SQLiteQueries {
             "  f_id_item, f_pages_number, f_current_page, f_last_read,\n" +
             "  f_publication_date,f_publisher,f_title,f_description,\n" +
             "  f_internal_uri,f_name,f_islastpage,f_documenttime\n" +
-            "from T_ITEM;";
+            "   from T_ITEM as I INNER JOIN T_AUTHOR as A\n" +
+            "where I.f_author_id==A.f_id_author;";
 
 }
