@@ -32,5 +32,10 @@ public interface SQLImporter {
      */
     List<CybookBook> getBooksByAuthor(CybookAuthor author) throws ReaderSQLException, InvalidArgumentException;
 
+    /**
+     * This should return all the books presented in your library
+     * @return {@link List} List of {@link CybookBook} elements
+     * @throws ReaderSQLException
+     */
     List<CybookBook> getBooks() throws ReaderSQLException;
 }

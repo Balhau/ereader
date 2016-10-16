@@ -24,8 +24,6 @@ public class SQLiteImporter implements SQLImporter{
 
     private Connection conn;
 
-    private static final Function<ResultSet,List<CybookAuthor>>
-
     /**
      * @param path Path for the sqlite database
      */
@@ -39,13 +37,7 @@ public class SQLiteImporter implements SQLImporter{
 
     @Override
     public List<CybookAuthor> getAuthors() throws ReaderSQLException {
-        try{
-            Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery(GET_AUTHORS_QUERY);
-            return getAuthors(rs);
-        }catch(Exception ex){
-            throw new ReaderSQLException(ex);
-        }
+        return getAuthors(GET_AUTHORS_QUERY);
     }
 
     /**
@@ -67,7 +59,7 @@ public class SQLiteImporter implements SQLImporter{
         if(author==null || author.getId()<=0){
             throw new InvalidArgumentException("Invalid author object");
         }
-        return getBooks(GET_BOOKS_BY_AUTHOR_QUERY);
+        return getBooks(String.format(GET_BOOKS_BY_AUTHOR_QUERY,author.getId()));
     }
 
     private List<CybookBook> getBooks(String query) throws ReaderSQLException {
@@ -75,6 +67,16 @@ public class SQLiteImporter implements SQLImporter{
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             return readBooks(rs);
+        }catch (Exception e){
+            throw new ReaderSQLException(e);
+        }
+    }
+
+    private List<CybookAuthor> getAuthors(String query) throws ReaderSQLException{
+        try{
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            return readAuthors(rs);
         }catch (Exception e){
             throw new ReaderSQLException(e);
         }
@@ -102,7 +104,7 @@ public class SQLiteImporter implements SQLImporter{
         return books;
     }
 
-    private List<CybookAuthor> getAuthors(ResultSet rs) throws Exception{
+    private List<CybookAuthor> readAuthors(ResultSet rs) throws Exception{
         List<CybookAuthor> authors = new ArrayList<>();
         while(rs.next()){
             authors.add(new CybookAuthor(
