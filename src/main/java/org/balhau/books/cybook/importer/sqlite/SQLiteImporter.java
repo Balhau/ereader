@@ -12,6 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.function.Function;
 
 import static org.balhau.books.utils.SqlUtilities.*;
 import static org.balhau.books.cybook.importer.sqlite.SQLiteQueries.*;
@@ -22,6 +23,8 @@ public class SQLiteImporter implements SQLImporter{
 
 
     private Connection conn;
+
+    private static final Function<ResultSet,List<CybookAuthor>>
 
     /**
      * @param path Path for the sqlite database
@@ -36,20 +39,13 @@ public class SQLiteImporter implements SQLImporter{
 
     @Override
     public List<CybookAuthor> getAuthors() throws ReaderSQLException {
-        List<CybookAuthor> authors = new ArrayList<>();
         try{
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(GET_AUTHORS_QUERY);
-            while(rs.next()){
-                authors.add(new CybookAuthor(
-                        rs.getInt(1),
-                        rs.getString(2)
-                ));
-            }
+            return getAuthors(rs);
         }catch(Exception ex){
             throw new ReaderSQLException(ex);
         }
-        return authors;
     }
 
     /**
@@ -58,13 +54,12 @@ public class SQLiteImporter implements SQLImporter{
      */
     @Override
     public List<CybookBook> getReadingBooks() throws ReaderSQLException{
-        try{
-            Statement st=conn.createStatement();
-            ResultSet rs=st.executeQuery(READING_BOOKS_QUERY);
-            return readBooks(rs);
-        }catch (Exception e) {
-            throw new ReaderSQLException(e);
-        }
+        return getBooks(READING_BOOKS_QUERY);
+    }
+
+    @Override
+    public List<CybookBook> getBooks() throws ReaderSQLException {
+        return getBooks(GET_ALL_BOOKS_QUERY);
     }
 
     @Override
@@ -72,13 +67,16 @@ public class SQLiteImporter implements SQLImporter{
         if(author==null || author.getId()<=0){
             throw new InvalidArgumentException("Invalid author object");
         }
+        return getBooks(GET_BOOKS_BY_AUTHOR_QUERY);
+    }
+
+    private List<CybookBook> getBooks(String query) throws ReaderSQLException {
         try{
             Statement st = conn.createStatement();
-            String queryString = String.format(GET_BOOKS_BY_AUTHOR_QUERY,author.getId());
-            ResultSet rs = st.executeQuery(queryString);
+            ResultSet rs = st.executeQuery(query);
             return readBooks(rs);
-        }catch (Exception ex){
-            throw new ReaderSQLException(ex);
+        }catch (Exception e){
+            throw new ReaderSQLException(e);
         }
     }
 
@@ -102,5 +100,16 @@ public class SQLiteImporter implements SQLImporter{
             books.add(b.build());
         }
         return books;
+    }
+
+    private List<CybookAuthor> getAuthors(ResultSet rs) throws Exception{
+        List<CybookAuthor> authors = new ArrayList<>();
+        while(rs.next()){
+            authors.add(new CybookAuthor(
+                    rs.getInt(1),
+                    rs.getString(2)
+            ));
+        }
+        return authors;
     }
 }

@@ -31,4 +31,6 @@ public interface SQLImporter {
      * this @throws {@link ReaderSQLException} Exception for sql operations
      */
     List<CybookBook> getBooksByAuthor(CybookAuthor author) throws ReaderSQLException, InvalidArgumentException;
+
+    List<CybookBook> getBooks() throws ReaderSQLException;
 }
